@@ -9,8 +9,8 @@ export default function MyTech(){
             </View>
 
             <View style={styles.inputBox}>
-                <TextInput></TextInput>
-                <Pressable></Pressable>
+                <TextInput style={styles.input}></TextInput>
+                <Pressable style={styles.inputButton}></Pressable>
             </View>
 
             <View style={styles.listBody}>

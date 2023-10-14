@@ -13,7 +13,25 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     inputBox: {
-        flex: 1
+        flex: 0.3,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        top: '-7%',
+        gap: 4
+    },
+    input: {
+        backgroundColor: themes.colors.gray_500,
+        borderColor: themes.colors.gray_700,
+        borderRadius: 6,
+        width: '65%',
+        padding: 16
+    },
+    inputButton: {
+        backgroundColor: themes.colors.blue_dark,
+        borderRadius: 6,
+        width: 18,
+        height: 18,
+        padding: 24
     },
     listBody: {
         flex: 3
