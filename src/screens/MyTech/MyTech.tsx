@@ -15,12 +15,23 @@ export default function MyTech(){
 
             <View style={styles.listBody}>
                 <View style={styles.subHeader}>
-                    <Text>Criadas</Text>
-                    <Text>Concluídas</Text>
+                    <View style={styles.subHeaderSpan}>
+                        <Text style={styles.subHeaderText}>Criadas</Text>
+                        <View style={styles.counter}>
+                            <Text>1</Text>
+                        </View>
+                    </View>
+                    <View style={styles.subHeaderSpan}>
+                        <Text style={[styles.subHeaderText, {color: '#8284FA'}]}>Concluídas</Text>
+                        <View style={styles.counter}>
+                            <Text>1</Text>
+                        </View>
+                    </View>
                 </View>
 
                 <View>
-                    <Text>Você ainda não tem tecnologias cadastradas Crie tarefas e organize seus itens a fazer</Text>
+                    <Text>Você ainda não tem tecnologias cadastradas</Text>
+                    <Text>Crie tarefas e organize seus itens a fazer</Text>
                 </View>
             </View>
         </>

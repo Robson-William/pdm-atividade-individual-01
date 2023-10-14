@@ -37,7 +37,24 @@ const styles = StyleSheet.create({
         flex: 3
     },
     subHeader: {
-
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        margin: 24
+    },
+    subHeaderSpan: {
+        flexDirection: 'row',
+        alignItems:'center',
+        gap: 8
+    },
+    subHeaderText: {
+        color: themes.colors.blue
+    },
+    counter: {
+        backgroundColor: themes.colors.gray_400,
+        width: 25,
+        height: 19,
+        padding: 8,
+        borderRadius: 8
     },
     tech: {
 
