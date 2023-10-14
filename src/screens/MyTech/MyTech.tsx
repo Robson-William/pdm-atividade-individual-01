@@ -29,9 +29,13 @@ export default function MyTech(){
                     </View>
                 </View>
 
+                <View style={styles.warningMessage}>
+                    <Text style={[styles.warningMessageText, {fontWeight: '700'}]}>Você ainda não tem tecnologias cadastradas</Text>
+                    <Text style={styles.warningMessageText}>Crie tarefas e organize seus itens a fazer</Text>
+                </View>
+
                 <View>
-                    <Text>Você ainda não tem tecnologias cadastradas</Text>
-                    <Text>Crie tarefas e organize seus itens a fazer</Text>
+                    
                 </View>
             </View>
         </>

@@ -56,6 +56,14 @@ const styles = StyleSheet.create({
         padding: 8,
         borderRadius: 8
     },
+    warningMessage: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 48
+    },
+    warningMessageText: {
+        color: themes.colors.gray_300
+    },
     tech: {
 
     }
