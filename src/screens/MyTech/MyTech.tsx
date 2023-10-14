@@ -1,19 +1,20 @@
 import { Pressable, Text, TextInput, View } from "react-native";
+import styles from "./styles";
 
 export default function MyTech(){
     return (
-        <View>
-            <View>
-                <Text>Minhas Tecnologias</Text>
+        <>
+            <View style={styles.header}>
+                <Text style={styles.headerText}>Minhas Tecnologias</Text>
             </View>
 
-            <View>
+            <View style={styles.inputBox}>
                 <TextInput></TextInput>
                 <Pressable></Pressable>
             </View>
 
-            <View>
-                <View>
+            <View style={styles.listBody}>
+                <View style={styles.subHeader}>
                     <Text>Criadas</Text>
                     <Text>Concluídas</Text>
                 </View>
@@ -22,6 +23,6 @@ export default function MyTech(){
                     <Text>Você ainda não tem tecnologias cadastradas Crie tarefas e organize seus itens a fazer</Text>
                 </View>
             </View>
-        </View>
+        </>
     )
 }
