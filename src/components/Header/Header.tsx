@@ -4,9 +4,9 @@ import styles from './styles';
 export default function Header(){
     return (
         <>
-        <View style={styles.header}>
+            <View style={styles.header}>
                 <Text style={styles.headerText}>Minhas Tecnologias</Text>
-        </View>
+            </View>
         </>
     )
 }

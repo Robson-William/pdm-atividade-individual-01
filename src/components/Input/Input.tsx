@@ -6,7 +6,9 @@ export default function Input(){
         <>
             <View style={styles.inputBox}>
                 <TextInput style={styles.input}></TextInput>
-                <Pressable style={styles.inputButton}><Image source={require('../../../assets/plus.png')}/></Pressable>
+                <Pressable style={styles.inputButton}>
+                    <Image style={{width: 16, height: 16}}source={require('../../../assets/plus.png')}/>
+                </Pressable>
             </View>
         </>
     )
