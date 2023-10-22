@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         flex: 0.3,
         flexDirection: 'row',
         justifyContent: 'center',
-        top: '-7%',
+        top: '-4%',
         gap: 4
     },
     input: {
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     },
     counter: {
         backgroundColor: themes.colors.gray_400,
+        justifyContent: 'center',
         width: 25,
         height: 19,
         padding: 8,
@@ -65,7 +66,27 @@ const styles = StyleSheet.create({
         color: themes.colors.gray_300
     },
     tech: {
-
+        flexDirection: 'row',
+        backgroundColor: themes.colors.gray_400,
+        justifyContent: 'center',
+        borderRadius: 8,
+        margin: 40,
+        height: 64,
+        padding: 12,
+        gap: 8
+    },
+    techButtonDone: {
+        backgroundColor: themes.colors.gray_600,
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: themes.colors.blue,
+        width: 24,
+        height: 24,
+        borderRadius: 24
+    },
+    techContent: {
+        color: themes.colors.gray_100,
+        overflow: 'scroll'
     }
 })
 
