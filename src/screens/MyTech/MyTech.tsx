@@ -1,17 +1,14 @@
 import { Image, Pressable, Text, TextInput, View } from "react-native";
 import styles from "./styles";
+import Header from "../../components/Header/Header";
+import Input from "../../components/Input/Input";
+import Tech from "../../components/Tech/Tech";
 
 export default function MyTech(){
     return (
         <>
-            <View style={styles.header}>
-                <Text style={styles.headerText}>Minhas Tecnologias</Text>
-            </View>
-
-            <View style={styles.inputBox}>
-                <TextInput style={styles.input}></TextInput>
-                <Pressable style={styles.inputButton}><Image source={require('../../../assets/plus.png')}/></Pressable>
-            </View>
+            <Header />
+            <Input />
 
             <View style={styles.listBody}>
                 <View style={styles.subHeader}>
@@ -34,11 +31,7 @@ export default function MyTech(){
                     <Text style={styles.warningMessageText}>Crie tarefas e organize seus itens a fazer</Text>
                 </View>
 
-                <View style={styles.tech}>
-                    <Pressable style={styles.techButtonDone}></Pressable>
-                    <Text style={styles.techContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quaerat dolor unde enim reiciendis. Harum magni sapiente accusantium asperiores placeat voluptatum, tenetur officia modi cupiditate quam laboriosam possimus ratione quibusdam.</Text>
-                    <Pressable style={styles.techButtonDone}></Pressable>
-                </View>
+                <Tech />
             </View>
         </>
     )
