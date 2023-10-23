@@ -5,14 +5,15 @@ interface Tech {
     id: string,
     content: string,
     isDone: boolean,
-    handleRemove: Function
+    handleRemove: Function,
+    handleDone: Function
 }
 
-export default function Tech({tech, handleRemove}:Tech){
+export default function Tech({tech, handleRemove, handleDone}:Tech){
     return (
         <>
             <View style={styles.tech}>
-                <Pressable style={styles.techButtonDone}></Pressable>
+                <Pressable style={styles.techButtonDone} onPress={() => handleDone(tech.id)}></Pressable>
                 <Text style={[styles.techContent, tech.isDone ? styles.checked : null]}>
                     {tech.content}
                 </Text>

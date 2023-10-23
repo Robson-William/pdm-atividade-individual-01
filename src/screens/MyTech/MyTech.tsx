@@ -22,10 +22,27 @@ export default function MyTech(){
         setList(newList)
     }
 
-    function removeTech(id){
+    function removeTech(id: string){
         const newList = list.filter((tech) => tech.id !== id);
 
         setList(newList);
+    }
+
+    function checkDone(id: string){
+        const newList = list.map((tech) => {
+            if(tech.id === id){
+                const newTech = {
+                    ...tech,
+                    isDone: !tech.isDone
+                }
+
+                return newTech;
+            }
+
+            return tech;
+        })
+
+        setList(newList)
     }
 
     return (
@@ -56,7 +73,7 @@ export default function MyTech(){
 
                 <FlatList
                     data={list}
-                    renderItem={({item}) => <Tech tech={item} handleRemove={removeTech} />}
+                    renderItem={({item}) => <Tech tech={item} handleRemove={removeTech} handleDone={checkDone} />}
                     keyExtractor={item => item.id}
                 />
             </View>
