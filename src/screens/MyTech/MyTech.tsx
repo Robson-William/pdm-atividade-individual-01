@@ -9,17 +9,23 @@ import Input from "../../components/Input/Input";
 import Tech from "../../components/Tech/Tech";
 
 const mockList = [
-    {id: '1', content: 'Teste'},
-    {id: '2', content: 'Teste 02'}
+    {id: uuidv4(), content: 'Teste', isDone: false},
+    {id: uuidv4(), content: 'Teste 02', isDone: true}
 ];
 
 export default function MyTech(){
     const [list, setList] = useState(mockList);
 
     function addTech(tech:string){
-        const newList = list.concat({id: uuidv4(), content: tech});
+        const newList = list.concat({id: uuidv4(), content: tech, isDone: false});
 
         setList(newList)
+    }
+
+    function removeTech(id){
+        const newList = list.filter((tech) => tech.id !== id);
+
+        setList(newList);
     }
 
     return (
@@ -50,7 +56,7 @@ export default function MyTech(){
 
                 <FlatList
                     data={list}
-                    renderItem={({item}) => <Tech tech={item}/>}
+                    renderItem={({item}) => <Tech tech={item} handleRemove={removeTech} />}
                     keyExtractor={item => item.id}
                 />
             </View>
