@@ -7,12 +7,14 @@ const styles = StyleSheet.create({
         backgroundColor: themes.colors.gray_400,
         justifyContent: 'space-between',
         borderRadius: 8,
-        margin: 40,
+        marginLeft: 40,
+        marginRight: 40,
+        marginBottom: 12,
         height: 64,
         padding: 12,
         gap: 8
     },
-    techButtonDone: {
+    techButton: {
         backgroundColor: themes.colors.gray_600,
         borderStyle: 'solid',
         borderWidth: 1,
@@ -20,6 +22,9 @@ const styles = StyleSheet.create({
         width: 24,
         height: 24,
         borderRadius: 24
+    },
+    techButtonDone: {
+        
     },
     checked: {
         textDecorationLine: 'line-through',

@@ -16,12 +16,12 @@ const styles = StyleSheet.create({
         gap: 8
     },
     subHeaderText: {
-        color: themes.colors.blue
+        color: themes.colors.blue,
+        fontWeight: 'bold'
     },
     counter: {
         backgroundColor: themes.colors.gray_400,
         justifyContent: 'center',
-        width: 25,
         height: 19,
         padding: 8,
         borderRadius: 8

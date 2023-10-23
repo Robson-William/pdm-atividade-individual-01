@@ -1,11 +1,15 @@
 import { View, Text} from 'react-native';
 import styles from './styles';
 
-export default function Header(){
+type Props = {
+    text:string
+}
+
+export default function Header({text}:Props){
     return (
         <>
             <View style={styles.header}>
-                <Text style={styles.headerText}>Minhas Tecnologias</Text>
+                <Text style={styles.headerText}>{text}</Text>
             </View>
         </>
     )

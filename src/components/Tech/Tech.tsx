@@ -1,5 +1,6 @@
 import { View, Text, Pressable, Image } from 'react-native';
 import styles from './styles';
+import BouncyCheckbox from 'react-native-bouncy-checkbox';
 
 interface Tech {
     id: string,
@@ -13,7 +14,7 @@ export default function Tech({tech, handleRemove, handleDone}:Tech){
     return (
         <>
             <View style={styles.tech}>
-                <Pressable style={styles.techButtonDone} onPress={() => handleDone(tech.id)}></Pressable>
+                <BouncyCheckbox fillColor='#5E60CE' isChecked={tech.isDone} onPress={() => handleDone(tech.id)} />
                 <Text style={[styles.techContent, tech.isDone ? styles.checked : null]}>
                     {tech.content}
                 </Text>

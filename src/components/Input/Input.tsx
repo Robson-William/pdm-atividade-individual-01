@@ -8,7 +8,7 @@ export default function Input({handleAdd}){
     return (
         <>
             <View style={styles.inputBox}>
-                <TextInput style={styles.input} onChangeText={tech => setTech(tech)} value={tech}></TextInput>
+                <TextInput style={styles.input} onChangeText={tech => setTech(tech)} value={tech} placeholder='Adicione uma nova tecnologia'></TextInput>
                 <Pressable 
                     onPress={() => {
                         handleAdd(tech)

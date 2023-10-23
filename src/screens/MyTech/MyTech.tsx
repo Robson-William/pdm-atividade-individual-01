@@ -52,14 +52,14 @@ export default function MyTech(){
     }
 
     function getNumberOfDone(){
-        const done = list.filter((tech) => tech.done === true).length;
+        const done = list.filter((tech) => tech.isDone === true).length;
 
         return done;
     }
 
     return (
         <>
-            <Header />
+            <Header text={"Minhas Tecnologias"}/>
             <Input handleAdd={addTech}/>
 
             <View style={styles.listBody}>
@@ -67,13 +67,13 @@ export default function MyTech(){
                     <View style={styles.subHeaderSpan}>
                         <Text style={styles.subHeaderText}>Criadas</Text>
                         <View style={styles.counter}>
-                            <Text>{list.length}</Text>
+                            <Text style={{color: '#D9D9D9', fontWeight: 'bold'}} >{list.length}</Text>
                         </View>
                     </View>
                     <View style={styles.subHeaderSpan}>
                         <Text style={[styles.subHeaderText, {color: '#8284FA'}]}>Concluídas</Text>
                         <View style={styles.counter}>
-                            <Text>{getNumberOfDone() + ' de ' + list.length}</Text>
+                            <Text style={{color: '#D9D9D9', fontWeight: 'bold'}}>{getNumberOfDone() + " de " + list.length}</Text>
                         </View>
                     </View>
                 </View>
