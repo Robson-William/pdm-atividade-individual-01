@@ -1,14 +1,31 @@
-import { Image, Pressable, Text, TextInput, View } from "react-native";
+import { FlatList, Image, Pressable, Text, TextInput, View } from "react-native";
+import { useState} from 'react';
+
+import { v4 as uuidv4 } from 'uuid';
+
 import styles from "./styles";
 import Header from "../../components/Header/Header";
 import Input from "../../components/Input/Input";
 import Tech from "../../components/Tech/Tech";
 
+const mockList = [
+    {id: '1', content: 'Teste'},
+    {id: '2', content: 'Teste 02'}
+];
+
 export default function MyTech(){
+    const [list, setList] = useState(mockList);
+
+    function addTech(tech:string){
+        const newList = list.concat({id: uuidv4(), content: tech});
+
+        setList(newList)
+    }
+
     return (
         <>
             <Header />
-            <Input />
+            <Input handleAdd={addTech}/>
 
             <View style={styles.listBody}>
                 <View style={styles.subHeader}>
@@ -31,7 +48,11 @@ export default function MyTech(){
                     <Text style={styles.warningMessageText}>Crie tarefas e organize seus itens a fazer</Text>
                 </View>
 
-                <Tech />
+                <FlatList
+                    data={list}
+                    renderItem={({item}) => <Tech tech={item}/>}
+                    keyExtractor={item => item.id}
+                />
             </View>
         </>
     )
