@@ -1,4 +1,4 @@
-import { FlatList, Image, Pressable, Text, TextInput, View } from "react-native";
+import { FlatList, Image, Text, View } from "react-native";
 import { useState} from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -78,10 +78,14 @@ export default function MyTech(){
                     </View>
                 </View>
 
-                <View style={styles.warningMessage}>
-                    <Text style={[styles.warningMessageText, {fontWeight: '700'}]}>Você ainda não tem tecnologias cadastradas</Text>
-                    <Text style={styles.warningMessageText}>Crie tarefas e organize seus itens a fazer</Text>
-                </View>
+                {list.length === 0 && (
+                    <View style={styles.warningMessage}>
+                        <Image style={{width: 56, height: 56}} source={require("../../../assets/book.png")}/>
+                        <Text style={[styles.warningMessageText, {fontWeight: '700', marginTop: 16}]}>Você ainda não tem tecnologias cadastradas</Text>
+                        <Text style={styles.warningMessageText}>Crie tarefas e organize seus itens a fazer</Text>
+                    </View>
+                )}
+
 
                 <FlatList
                     data={list}

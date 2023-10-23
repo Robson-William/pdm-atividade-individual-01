@@ -2,7 +2,11 @@ import { View, TextInput, Pressable, Image } from 'react-native';
 import { useState } from 'react';
 import styles from './styles';
 
-export default function Input({handleAdd}){
+type Props = {
+    handleAdd: (tech: string) => void
+}
+
+export default function Input({handleAdd}:Props){
     const [tech, setTech] = useState('');
 
     return (

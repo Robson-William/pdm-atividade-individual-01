@@ -29,7 +29,11 @@ const styles = StyleSheet.create({
     warningMessage: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 48
+        marginTop: 12,
+        borderStyle: 'solid',
+        borderTopWidth: 1,
+        borderTopColor: themes.colors.gray_300,
+        paddingTop: 48
     },
     warningMessageText: {
         color: themes.colors.gray_300

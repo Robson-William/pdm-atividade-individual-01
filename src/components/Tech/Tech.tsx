@@ -2,15 +2,17 @@ import { View, Text, Pressable, Image } from 'react-native';
 import styles from './styles';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 
-interface Tech {
-    id: string,
-    content: string,
-    isDone: boolean,
+type Props = {
+    tech: {
+        id:string,
+        content:string,
+        isDone:boolean
+    }
     handleRemove: (id: string) => void,
     handleDone: (id: string) => void
 }
 
-export default function Tech({tech, handleRemove, handleDone}:Tech){
+export default function Tech({tech, handleRemove, handleDone}:Props){
     return (
         <>
             <View style={styles.tech}>
