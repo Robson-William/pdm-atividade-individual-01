@@ -8,13 +8,19 @@ import Header from "../../components/Header/Header";
 import Input from "../../components/Input/Input";
 import Tech from "../../components/Tech/Tech";
 
+type Tech = {
+    id: string,
+    content: string,
+    isDone: boolean
+}
+
 const mockList = [
     {id: uuidv4(), content: 'Teste', isDone: false},
     {id: uuidv4(), content: 'Teste 02', isDone: true}
 ];
 
 export default function MyTech(){
-    const [list, setList] = useState(mockList);
+    const [list, setList] = useState<Tech[]>(mockList);
 
     function addTech(tech:string){
         const newList = list.concat({id: uuidv4(), content: tech, isDone: false});
@@ -45,6 +51,12 @@ export default function MyTech(){
         setList(newList)
     }
 
+    function getNumberOfDone(){
+        const done = list.filter((tech) => tech.done === true).length;
+
+        return done;
+    }
+
     return (
         <>
             <Header />
@@ -55,13 +67,13 @@ export default function MyTech(){
                     <View style={styles.subHeaderSpan}>
                         <Text style={styles.subHeaderText}>Criadas</Text>
                         <View style={styles.counter}>
-                            <Text>1</Text>
+                            <Text>{list.length}</Text>
                         </View>
                     </View>
                     <View style={styles.subHeaderSpan}>
                         <Text style={[styles.subHeaderText, {color: '#8284FA'}]}>Concluídas</Text>
                         <View style={styles.counter}>
-                            <Text>1</Text>
+                            <Text>{getNumberOfDone() + ' de ' + list.length}</Text>
                         </View>
                     </View>
                 </View>

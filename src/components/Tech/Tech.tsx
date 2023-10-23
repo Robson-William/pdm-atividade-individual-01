@@ -5,8 +5,8 @@ interface Tech {
     id: string,
     content: string,
     isDone: boolean,
-    handleRemove: Function,
-    handleDone: Function
+    handleRemove: (id: string) => void,
+    handleDone: (id: string) => void
 }
 
 export default function Tech({tech, handleRemove, handleDone}:Tech){
