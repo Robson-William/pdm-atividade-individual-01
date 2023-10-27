@@ -14,7 +14,9 @@ export default {
         red: '#E25858',
     },
     fonts: {
-        default_font: "Inter"
+        default_font: "Inter_400Regular",
+        default_font_medium: "Inter_500Medium",
+        default_font_bold: "Inter_700Bold"
     },
     fontSize: {
         font_size_sm: '12',

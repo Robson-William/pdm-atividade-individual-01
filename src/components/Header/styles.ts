@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     },
     headerText: {
         color: themes.colors.blue,
+        fontFamily: themes.fonts.default_font_bold,
         fontSize: 20,
-        fontWeight: 'bold'
     },
 })
 

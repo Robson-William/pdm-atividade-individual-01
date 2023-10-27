@@ -1,6 +1,5 @@
 import { FlatList, Image, Text, View } from "react-native";
 import { useState} from 'react';
-
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from "./styles";
@@ -67,13 +66,13 @@ export default function MyTech(){
                     <View style={styles.subHeaderSpan}>
                         <Text style={styles.subHeaderText}>Criadas</Text>
                         <View style={styles.counter}>
-                            <Text style={{color: '#D9D9D9', fontWeight: 'bold'}} >{list.length}</Text>
+                            <Text style={styles.counterText} >{list.length}</Text>
                         </View>
                     </View>
                     <View style={styles.subHeaderSpan}>
                         <Text style={[styles.subHeaderText, {color: '#8284FA'}]}>Concluídas</Text>
                         <View style={styles.counter}>
-                            <Text style={{color: '#D9D9D9', fontWeight: 'bold'}}>{getNumberOfDone() + " de " + list.length}</Text>
+                            <Text style={styles.counterText}>{getNumberOfDone() + " de " + list.length}</Text>
                         </View>
                     </View>
                 </View>

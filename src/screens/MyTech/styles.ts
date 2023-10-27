@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     },
     subHeaderText: {
         color: themes.colors.blue,
-        fontWeight: 'bold'
+        fontFamily: themes.fonts.default_font_bold
     },
     counter: {
         backgroundColor: themes.colors.gray_400,
@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
         height: 19,
         padding: 8,
         borderRadius: 8
+    },
+    counterText: {
+        color: themes.colors.gray_100,
+        fontFamily: themes.fonts.default_font_bold
     },
     warningMessage: {
         justifyContent: 'center',

@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         width: '65%',
         padding: 16,
-        color: themes.colors.gray_200
+        color: themes.colors.gray_200,
+        fontFamily: themes.fonts.default_font
     },
     inputButton: {
         backgroundColor: themes.colors.blue_dark,

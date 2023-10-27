@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
     },
     techContent: {
         color: themes.colors.gray_100,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        fontFamily: themes.fonts.default_font_bold
     }
 })
 
